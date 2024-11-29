@@ -1,4 +1,5 @@
 require "nvchad.options"
+vim.g.lazyvim_php_lsp = "intelephense"
 
 -- add yours here!
 

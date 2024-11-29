@@ -24,7 +24,17 @@ require("lazy").setup({
 
   { import = "plugins" },
 }, lazy_config)
+local dapui = require('dapui')
+local dap = require('dap')
+-- Открыть DAP UI при запуске отладки
+dap.listeners.after.event_session_started["dapui_config"] = function()
+    dapui.open()
+end
 
+-- Закрыть UI после завершения отладки
+dap.listeners.after.event_exited["dapui_config"] = function()
+    dapui.close()
+end
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")

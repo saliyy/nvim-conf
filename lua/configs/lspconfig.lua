@@ -1,13 +1,13 @@
--- load defaults i.e lua_lsp
+-- Загружаем стандартные настройки, т.е. lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
--- EXAMPLE
-local servers = { "html", "cssls", "gopls" }
+-- Список серверов
+local servers = { "html", "cssls", "gopls", "intelephense" }  -- Добавляем "intelephense"
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- lsps with default config
+-- LSP с настройками по умолчанию
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = nvlsp.on_attach,
@@ -16,9 +16,23 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- configuring single server, example: typescript
+-- Конфигурация отдельного сервера, пример: TypeScript
 lspconfig.ts_ls.setup {
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
+}
+
+-- Конфигурация для Intelephense
+lspconfig.intelephense.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    intelephense = {
+      files = {
+        maxSize = 5000000; -- Устанавливаем максимальный размер файла
+      };
+    };
+  };
 }
