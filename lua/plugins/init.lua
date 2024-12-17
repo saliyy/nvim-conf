@@ -61,7 +61,7 @@ return {
             name = 'Launch',
             request = 'launch',
             mode = 'test',
-            program = '${file}',
+            program = '${workspaceFolder}',
             env = {
                DELIVERY_API_CONF = '/Users/vladislav.saly/work/services/delivery-api/deployments/local.dev.env'
             },
@@ -86,6 +86,13 @@ return {
       require('dap').listeners.before.event_exited["dapui_config"] = function()
         require("dapui").close()
       end
+    end,
+  },
+   {
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = "go",
+    opts = function()
+      return require "configs.null-ls"
     end,
   },
 }
