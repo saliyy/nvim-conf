@@ -4,7 +4,11 @@ return {
     -- event = 'BufWritePre', -- Uncomment for format on save
     opts = require "configs.conform",
   },
-
+  {
+    "dinhhuy258/git.nvim",
+    lazy = false,
+    opts = {}
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -19,7 +23,16 @@ return {
     lazy = false,
     opts = {}
   },
-  
+    {
+    "lewis6991/gitsigns.nvim",
+    lazy = false,
+    opts = {}
+  },
+ {
+    "sindrets/diffview.nvim",
+    lazy = false,
+    opts = {}
+  },
   {
     "williamboman/mason.nvim",
     opts = {

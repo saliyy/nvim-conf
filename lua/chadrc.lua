@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "oxocarbon",
+	theme = "nightowl",
   transparency= true,
   nvdash = {
     load_on_startup = true
