@@ -4,9 +4,10 @@
 
 ---@type ChadrcConfig
 local M = {}
-
+-- tundra
+-- wombat
 M.base46 = {
-	theme = "nightowl",
+	theme = "ayu_dark",
   transparency= true,
   nvdash = {
     load_on_startup = true

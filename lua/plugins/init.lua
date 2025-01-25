@@ -17,6 +17,7 @@ return {
   },
   
   { "nvim-neotest/nvim-nio" }, 
+  {"ewilazarus/preto"},
   
   {
     "stevearc/dressing.nvim",
