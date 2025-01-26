@@ -7,7 +7,7 @@ local M = {}
 -- tundra
 -- wombat
 M.base46 = {
-	theme = "ayu_dark",
+	theme = "mito-laser",
   transparency= true,
   nvdash = {
     load_on_startup = true
