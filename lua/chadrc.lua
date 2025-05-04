@@ -6,8 +6,9 @@
 local M = {}
 -- tundra
 -- wombat
+-- mito-laser
 M.base46 = {
-	theme = "mito-laser",
+	theme = "flexoki-light",
   transparency= true,
   nvdash = {
     load_on_startup = true
