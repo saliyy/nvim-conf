@@ -8,7 +8,7 @@ local M = {}
 -- wombat
 -- mito-laser
 M.base46 = {
-	theme = "flexoki-light",
+	theme = "ashes",
   transparency= true,
   nvdash = {
     load_on_startup = true
